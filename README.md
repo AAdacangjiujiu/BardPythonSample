@@ -8,7 +8,8 @@
 # Get cookies
 Open Google Chrome, log in to Bard, F12 to view the Application and obtain the required cookie value
  
-![微信图片_20230914165823](https://github.com/AAdacangjiujiu/BardPythonSample/assets/144994347/10c50d4e-e1e4-48ff-80e5-515019366170)
+![image](https://github.com/AAdacangjiujiu/BardPythonSample/assets/144994347/1a40cdba-b2e7-437a-ac27-27e90888039c)
+
 
 Replace to the desired location
 
