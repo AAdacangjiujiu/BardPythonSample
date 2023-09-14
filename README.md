@@ -1,4 +1,4 @@
-# BardPythonSample
+![image](https://github.com/AAdacangjiujiu/BardPythonSample/assets/144994347/83108c23-ba61-4d08-8683-ff92080fbf39)# BardPythonSample
 # install
  zpm bardpythonsample
  
@@ -16,4 +16,7 @@ Replace to the desired location
 ![image](https://github.com/AAdacangjiujiu/BardPythonSample/assets/144994347/b606bdcf-c5d1-4a52-b18b-e2bb9b413946)
 
 # Test
+
+w ##class(EmbeddedPython.Bard).Call("Hello")
+
 ![image](https://github.com/AAdacangjiujiu/BardPythonSample/assets/144994347/4b746320-1f55-4ca8-a120-396a1b8fe764)
