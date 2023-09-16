@@ -1,8 +1,10 @@
-![image](https://github.com/AAdacangjiujiu/BardPythonSample/assets/144994347/83108c23-ba61-4d08-8683-ff92080fbf39)# BardPythonSample
+
 # install
  zpm bardpythonsample
  
  irispip install  --target D:\work\iris\mgr\python GoogleBard
+
+ irispip install  --target D:\work\iris\mgr\python PyQt5
  
 ![微信图片_20230914165322](https://github.com/AAdacangjiujiu/BardPythonSample/assets/144994347/8a32b1e3-89de-4168-aa0f-be01ac99afcb)
 # Get cookies
