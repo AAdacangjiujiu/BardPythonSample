@@ -88,7 +88,7 @@ class DesktopPet(QWidget):
             )
             self.talkLabel.adjustSize()
         else:
-            self.talkLabel.setText("别点我")
+            self.talkLabel.setText("~~")
             self.talkLabel.setStyleSheet(
                 "font: bold;"
                 "font:25pt '楷体';"
