@@ -27,6 +27,17 @@ ClassMethod CallImage(input As %String, ImgUrl As %String) [ Language = python ]
           #print(bard.ask_about_image(aa,image))
    return bard.ask_about_image(input,image)['content']
 }
-
+ClassMethod SystemInfo() As %Status [ Language = python ]
+{
+	import iris
+	iris.system.Process.SetNamespace('%SYS')
+	a1=iris.execute('return $o(^|"%SYS"|NET(2,""))')
+	print(a1)
+	a2=iris.gref('^NET')
+	
+	print(a2[2])
+	#iris.execute('return ^|"%SYS"|NET(2,'+a1+',"DAC")')
+	return a2
+}
 }
 
