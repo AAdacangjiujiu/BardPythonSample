@@ -17,10 +17,18 @@ Replace to the desired location
 
 ![image](https://github.com/AAdacangjiujiu/BardPythonSample/assets/144994347/b606bdcf-c5d1-4a52-b18b-e2bb9b413946)
 
-# gif图替换
+# Gif image replace
 
-将normal文件夹下的gif图替换为你喜欢的，命名格式为normal1.gif,normal2.gif等
-将click文件夹下的gif图替换为你喜欢的，该动图为应用被点击时状态
+Replace the gif image in the normal folder with your preferred format, naming it normal1. gif, normal2. gif, etc
+
+Replace the gif image in the click folder with your favorite one, which shows the status of the application when clicked
+
+# url replace
+
+Replace the file URL in main.py with the local environment
+
+![image](https://github.com/AAdacangjiujiu/BardPythonSample/assets/144994347/e930c8c7-ef99-461e-9b83-741934080ca1)
+
 # Test
 1. Bard Run Test
 
