@@ -124,8 +124,8 @@ class DesktopPet(QWidget):
           'password':'jiahemk',
           'namespace':NS
         }
-        conn = iris.connect(args)
-        irispy = iris.createIRIs(conn)
+        conn = self.iris.connect(args)
+        irispy = self.iris.createIRIs(conn)
         return irispy
         
 
