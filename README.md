@@ -47,7 +47,7 @@ Right click to query iris runtime or dialogue
 # Other
 If you want to add other functions，Add corresponding menus in the following locations
 
-![image](https://github.com/AAdacangjiujiu/BardPythonSample/assets/144994347/27ca0ac8-ef8d-43a5-b1c5-30632258d261)
+![image](https://github.com/AAdacangjiujiu/BardPythonSample/assets/144994347/26412c25-2c76-4bd1-8025-622b5e090781)
 
 
 
