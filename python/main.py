@@ -99,7 +99,7 @@ class DesktopPet(QWidget):
             self.talkLabel.adjustSize()
             self.talk_condition = 0
     def getText(self):
-       text, okPressed = QInputDialog.getText(self, "Get text","有什么问题吗", QLineEdit.Normal, "")
+       text, okPressed = QInputDialog.getText(self, "Get text","Do you have any question?", QLineEdit.Normal, "")
        if okPressed and text != '':
          print(text)
          return text
