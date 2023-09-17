@@ -119,7 +119,7 @@ class DesktopPet(QWidget):
     def irisconnect(self,NS):
         args={
           'hostname':'127.0.0.1',
-          'port':'51773',
+          'port':51773,
           'username':'_system',
           'password':'',
           'namespace':NS
