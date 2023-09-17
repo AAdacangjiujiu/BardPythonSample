@@ -121,7 +121,7 @@ class DesktopPet(QWidget):
           'hostname':'127.0.0.1',
           'port':'51773',
           'username':'_system',
-          'password':'jiahemk',
+          'password':'',
           'namespace':NS
         }
         conn = self.iris.connect(args)
