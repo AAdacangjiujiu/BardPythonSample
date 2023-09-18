@@ -39,7 +39,7 @@ class DesktopPet(QWidget):
         self.pet1 = []
         for i in os.listdir(url+"normal\\"):
             self.pet1.append(url+"normal\\" + i)
-        self.dialog = []
+        self.dialog = ['~~']
         
 
     def petNormalAction(self):
