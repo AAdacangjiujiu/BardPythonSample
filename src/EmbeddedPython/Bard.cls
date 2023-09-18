@@ -29,15 +29,13 @@ ClassMethod CallImage(input As %String, ImgUrl As %String) [ Language = python ]
 }
 ClassMethod SystemInfo() As %Status [ Language = python ]
 {
-	import iris
-	iris.system.Process.SetNamespace('%SYS')
-	a1=iris.execute('return $o(^|"%SYS"|NET(2,""))')
-	print(a1)
-	a2=iris.gref('^NET')
-	
-	print(a2[2])
-	#iris.execute('return ^|"%SYS"|NET(2,'+a1+',"DAC")')
-	return a2
+   import iris
+   a1=iris.execute('return $o(^|"%SYS"|NET(2,""))')
+   print(a1)
+   iris.execute('set a2=^|"%SYS"|NET(2,"IRISHEALTH","DAC")')
+   iris.execute('set a2=$system.SQL.DATEDIFF("hh",a2,$h)')
+   a3=iris.execute('return a2')
+   return a3
 }
 }
 
