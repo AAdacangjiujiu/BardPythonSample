@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import *
 import tkinter
 import tkinter.messagebox
 import iris
+url="D:\\work\\iris\\mgr\\python\\"
 class DesktopPet(QWidget):
     def __init__(self, parent=None, **kwargs):
         super(DesktopPet, self).__init__(parent)
@@ -21,24 +22,13 @@ class DesktopPet(QWidget):
         self.setAttribute(Qt.WA_TranslucentBackground, True)
         self.repaint()
 
-    def initPall(self):
-        icons = os.path.join('C:\\InterSystems\\IRISHealth\\mgr\\python\\DesktopPettigerIcon.jpg')
-        quit_action = QAction('退出', self, triggered=self.quit)
-        quit_action.setIcon(QIcon(icons))
-        showing = QAction(u'显示', self, triggered=self.showwin)
-        self.tray_icon_menu = QMenu(self)
-        self.tray_icon_menu.addAction(quit_action)
-        self.tray_icon_menu.addAction(showing)
-        self.tray_icon = QSystemTrayIcon(self)
-        self.tray_icon.setIcon(QIcon(icons))
-        self.tray_icon.setContextMenu(self.tray_icon_menu)
-        self.tray_icon.show()
+ 
 
     def initPetImage(self):
         self.talkLabel = QLabel(self)
         self.talkLabel.setStyleSheet("font:15pt '楷体';border-width: 1px;color:blue;")
         self.image = QLabel(self)
-        self.movie = QMovie("C:\\InterSystems\\IRISHealth\\mgr\\python\\normal\\normal1.gif")
+        self.movie = QMovie(url+"normal\\normal1.gif")
         self.movie.setScaledSize(QSize(200, 200))
         self.image.setMovie(self.movie)
         self.movie.start()
@@ -47,12 +37,10 @@ class DesktopPet(QWidget):
         # 展示
         self.show()
         self.pet1 = []
-        for i in os.listdir("C:\\InterSystems\\IRISHealth\\mgr\\python\\normal\\"):
-            self.pet1.append("C:\\InterSystems\\IRISHealth\\mgr\\python\\normal\\" + i)
+        for i in os.listdir(url+"normal\\"):
+            self.pet1.append(url+"normal\\" + i)
         self.dialog = []
-        with open("C:\\InterSystems\\IRISHealth\\mgr\\python\\dialog.txt", "r") as f:
-            text = f.read()
-            self.dialog = text.split("\n")
+        
 
     def petNormalAction(self):
         self.timer = QTimer()
@@ -69,7 +57,7 @@ class DesktopPet(QWidget):
             self.image.setMovie(self.movie)
             self.movie.start()
         else:
-            self.movie = QMovie("C:\\InterSystems\\IRISHealth\\mgr\\python\\click\\click.gif")
+            self.movie = QMovie(url+"click\\click.gif")
             self.movie.setScaledSize(QSize(200, 200))
             self.image.setMovie(self.movie)
             self.movie.start()
@@ -118,14 +106,14 @@ class DesktopPet(QWidget):
             self.talkLabel.adjustSize()
     def irisconnect(self,NS):
         args={
-          'hostname':'127.0.0.1',
-          'port':51773,
+          'hostname':'localhost',
+          'port':51774,
           'username':'_system',
           'password':'',
           'namespace':NS
         }
-        conn = self.iris.connect(args)
-        irispy = self.iris.createIRIs(conn)
+        conn = iris.connect(**args)
+        irispy = iris.createIRIS(conn)
         return irispy
         
 
@@ -192,12 +180,12 @@ class DesktopPet(QWidget):
        
         if action == ask:
            input=self.getText()
-           TEMP=self.irisconnect("TEST")
-           stringVal = TEMP.classMethodstring("EmbeddedPython.Bard", 'Call',input)
+           TEMP=self.irisconnect("MLTEST")
+           stringVal = TEMP.classMethodString("EmbeddedPython.Bard", 'Call',input)
            self.talkInput(stringVal)
         if action == sysinfo:
-           TEMP=self.irisconnect("TEST")
-           stringVal = TEMP.classMethodstring("EmbeddedPython.Bard", 'SystemInfo')
+           TEMP=self.irisconnect("MLTEST")
+           stringVal = TEMP.classMethodString("EmbeddedPython.Bard", 'SystemInfo')
            #print(stringVal)
            self.talkInput("has been running for "+stringVal+" hours")
            
